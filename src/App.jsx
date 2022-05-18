@@ -6,7 +6,7 @@ const App = () => {
   const [chatId, setChatId] = useState(null);
 
   return (
-    <Home setChatId={setChatId}>
+    <Home chatId={chatId} setChatId={setChatId}>
       <Chat chatId={chatId} />
     </Home>
   );

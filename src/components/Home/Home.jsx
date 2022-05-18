@@ -12,7 +12,7 @@ import {
 const emilyIco =
   "https://chatscope.io/storybook/react/static/media/emily.d34aecd9.svg";
 
-const Home = ({ children, setChatId }) => {
+const Home = ({ children, chatId, setChatId }) => {
   return (
     <div
       style={{
@@ -28,6 +28,7 @@ const Home = ({ children, setChatId }) => {
               name="Group 1"
               lastSenderName="Chat 1"
               info="Yes i can do it for you"
+              active={chatId === "1"}
               onClick={() => {
                 setChatId("1");
               }}
@@ -39,6 +40,7 @@ const Home = ({ children, setChatId }) => {
               name="Group 2"
               lastSenderName="Joe"
               info="Yes i can do it for you"
+              active={chatId === "2"}
               onClick={() => {
                 setChatId("2");
               }}
@@ -51,6 +53,7 @@ const Home = ({ children, setChatId }) => {
               lastSenderName="Emily"
               info="Yes i can do it for you"
               unreadCnt={3}
+              active={chatId === "3"}
               onClick={() => {
                 setChatId("3");
               }}
